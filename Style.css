@@ -845,3 +845,94 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================
+   HIWAMOVIES EXTRA DARK THEME FIX
+========================================= */
+
+html,
+body {
+  background: #08090d !important;
+  color: #ffffff !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.header {
+  background: rgba(8, 9, 13, 0.95) !important;
+}
+
+.section {
+  background: #08090d;
+}
+
+.movie-card,
+.featured-card,
+.genre-card,
+.empty-watchlist {
+  background: #111219 !important;
+  color: #ffffff;
+  border-color: #242631 !important;
+}
+
+.movie-title,
+.section-heading,
+.logo,
+.hero h1 {
+  color: #ffffff !important;
+}
+
+.movie-meta,
+.hero p,
+.section-subtitle {
+  color: #a7a8b3 !important;
+}
+
+.btn-primary {
+  background: #785cff !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary {
+  background: #181922 !important;
+  color: #ffffff !important;
+  border-color: #242631 !important;
+}
+
+.media-filter,
+.filter {
+  background: #111219 !important;
+  color: #a7a8b3 !important;
+  border-color: #242631 !important;
+}
+
+.media-filter.active,
+.filter.active {
+  background: #785cff !important;
+  color: #ffffff !important;
+}
+
+.movie-poster {
+  background: #181922 !important;
+}
+
+.modal-content {
+  background: #111219 !important;
+  color: #ffffff !important;
+}
+
+.search-overlay {
+  background: #08090d !important;
+}
+
+.search-input {
+  background: #111219 !important;
+  color: #ffffff !important;
+  border-color: #242631 !important;
+}
+
+.footer {
+  background: #08090d !important;
+  border-color: #242631 !important;
+}
