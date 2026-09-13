@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="HiwaMovies — discover movies, TV shows and anime.">
+    <meta name="theme-color" content="#08090c">
+
+    <title>HiwaMovies</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="#" class="logo" id="logo">
+                <span class="logo-icon">H</span>
+                <span>Hiwa<span class="logo-accent">Movies</span></span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#movies" class="nav-link" data-nav="movies">Movies</a>
+                <a href="#shows" class="nav-link" data-nav="shows">TV Shows</a>
+                <a href="#anime" class="nav-link" data-nav="anime">Anime</a>
+                <a href="#watchlist" class="nav-link" data-nav="watchlist">My List</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    class="icon-button"
+                    id="openSearch"
+                    type="button"
+                    aria-label="Search"
+                >
+                    <span>⌕</span>
+                </button>
+
+                <button
+                    class="menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==============================
+         MOBILE NAVIGATION
+    =============================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#movies" class="mobile-nav-link">Movies</a>
+        <a href="#shows" class="mobile-nav-link">TV Shows</a>
+        <a href="#anime" class="mobile-nav-link">Anime</a>
+        <a href="#watchlist" class="mobile-nav-link">My List</a>
+
+        <button class="mobile-search-button" id="mobileSearchButton">
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- ==============================
+         SEARCH OVERLAY
+    =============================== -->
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button
+                class="search-close"
+                id="closeSearch"
+                type="button"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <div class="search-input-wrapper">
+
+                <span class="search-symbol">⌕</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search movies, shows, anime..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div class="search-results" id="searchResults">
+                <div class="search-empty">
+                    Start typing to search.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ==============================
+         HERO
+    =============================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <div class="hero-label">
+                        YOUR MOVIE UNIVERSE
+                    </div>
+
+                    <h1>
+                        Movies.<br>
+                        Shows.<br>
+                        <span>Anime.</span>
+                    </h1>
+
+                    <p>
+                        Discover something worth watching.
+                        Browse your favorite movies, TV shows and anime
+                        all in one place.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="btn btn-primary"
+                            id="exploreButton"
+                            type="button"
+                        >
+                            ▶ Explore Now
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            id="randomButton"
+                            type="button"
+                        >
+                            🎲 Random
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-fade"></div>
+
+        </section>
+
+
+        <!-- ==============================
+             DISCOVER
+        =============================== -->
+
+        <section class="content-section" id="movies">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            DISCOVER
+                        </div>
+
+                        <h2>Browse Everything</h2>
+                    </div>
+
+                    <div class="media-filters" id="mediaFilters">
+
+                        <button
+                            class="media-filter active"
+                            data-type="all"
+                            type="button"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="media-filter"
+                            data-type="movie"
+                            type="button"
+                        >
+                            Movies
+                        </button>
+
+                        <button
+                            class="media-filter"
+                            data-type="show"
+                            type="button"
+                        >
+                            TV Shows
+                        </button>
+
+                        <button
+                            class="media-filter"
+                            data-type="anime"
+                            type="button"
+                        >
+                            Anime
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Genre filters -->
+
+                <div class="genre-filters" id="genreFilters">
+
+                    <button
+                        class="filter active"
+                        data-filter="all"
+                        type="button"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Action"
+                        type="button"
+                    >
+                        Action
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Adventure"
+                        type="button"
+                    >
+                        Adventure
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Drama"
+                        type="button"
+                    >
+                        Drama
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Comedy"
+                        type="button"
+                    >
+                        Comedy
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Sci-Fi"
+                        type="button"
+                    >
+                        Sci-Fi
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Thriller"
+                        type="button"
+                    >
+                        Thriller
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Horror"
+                        type="button"
+                    >
+                        Horror
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="Animation"
+                        type="button"
+                    >
+                        Animation
+                    </button>
+
+                </div>
+
+
+                <!-- Movie grid -->
+
+                <div class="movie-grid" id="movieGrid">
+                    <!-- JavaScript inserts cards here -->
+                </div>
+
+
+                <div class="load-more-wrapper">
+
+                    <button
+                        class="btn btn-outline"
+                        id="loadMore"
+                        type="button"
+                    >
+                        Load More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             TV SHOWS
+        =============================== -->
+
+        <section class="content-section alternate-section" id="shows">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            SERIES
+                        </div>
+
+                        <h2>TV Shows</h2>
+                    </div>
+
+                    <button
+                        class="text-button"
+                        data-view-type="show"
+                        type="button"
+                    >
+                        View All →
+                    </button>
+
+                </div>
+
+                <div class="movie-grid" id="showGrid">
+                    <!-- JavaScript inserts shows -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ANIME
+        =============================== -->
+
+        <section class="content-section" id="anime">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            JAPANESE ANIMATION
+                        </div>
+
+                        <h2>Anime</h2>
+                    </div>
+
+                    <button
+                        class="text-button"
+                        data-view-type="anime"
+                        type="button"
+                    >
+                        View All →
+                    </button>
+
+                </div>
+
+                <div class="movie-grid" id="animeGrid">
+                    <!-- JavaScript inserts anime -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             FEATURED
+        =============================== -->
+
+        <section class="featured-section">
+
+            <div class="container">
+
+                <div class="featured-card">
+
+                    <div class="featured-content">
+
+                        <div class="section-eyebrow">
+                            FEATURED
+                        </div>
+
+                        <h2>The Dark Knight</h2>
+
+                        <div class="featured-meta">
+                            <span>2008</span>
+                            <span>•</span>
+                            <span>2h 32m</span>
+                            <span>•</span>
+                            <span>Action</span>
+                            <span>•</span>
+                            <strong>★ 9.0</strong>
+                        </div>
+
+                        <p>
+                            A legendary crime thriller featuring Batman,
+                            Gotham City and one of cinema's most memorable
+                            villains.
+                        </p>
+
+                        <button
+                            class="btn btn-primary"
+                            id="featuredButton"
+                            data-movie-id="3"
+                            type="button"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             GENRES
+        =============================== -->
+
+        <section class="content-section" id="genres">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            EXPLORE
+                        </div>
+
+                        <h2>Browse by Genre</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="genre-grid">
+
+                    <button
+                        class="genre-card"
+                        data-genre="Action"
+                        type="button"
+                    >
+                        <span>⚔️</span>
+                        <strong>Action</strong>
+                        <small>Explosive stories</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Drama"
+                        type="button"
+                    >
+                        <span>🎭</span>
+                        <strong>Drama</strong>
+                        <small>Stories that hit hard</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Comedy"
+                        type="button"
+                    >
+                        <span>😂</span>
+                        <strong>Comedy</strong>
+                        <small>Just have fun</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Sci-Fi"
+                        type="button"
+                    >
+                        <span>🚀</span>
+                        <strong>Sci-Fi</strong>
+                        <small>Beyond reality</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Thriller"
+                        type="button"
+                    >
+                        <span>🕵️</span>
+                        <strong>Thriller</strong>
+                        <small>Keep guessing</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Horror"
+                        type="button"
+                    >
+                        <span>👻</span>
+                        <strong>Horror</strong>
+                        <small>Not for the weak</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Animation"
+                        type="button"
+                    >
+                        <span>✨</span>
+                        <strong>Animation</strong>
+                        <small>Animated worlds</small>
+                    </button>
+
+                    <button
+                        class="genre-card"
+                        data-genre="Adventure"
+                        type="button"
+                    >
+                        <span>🗺️</span>
+                        <strong>Adventure</strong>
+                        <small>Go somewhere new</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             WATCHLIST
+        =============================== -->
+
+        <section class="content-section alternate-section" id="watchlist">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            YOUR COLLECTION
+                        </div>
+
+                        <h2>My List</h2>
+                    </div>
+
+                </div>
+
+
+                <div id="emptyWatchlist" class="empty-state">
+
+                    <div class="empty-icon">♡</div>
+
+                    <h3>Your list is empty</h3>
+
+                    <p>
+                        Add movies, shows and anime you want to watch later.
+                    </p>
+
+                </div>
+
+
+                <div class="movie-grid" id="watchlistGrid">
+                    <!-- JavaScript inserts watchlist items -->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         MOVIE DETAILS MODAL
+    =============================== -->
+
+    <div
+        class="modal"
+        id="movieModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <div
+            class="modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <!-- Video player -->
+
+            <div
+                class="modal-player-wrap"
+                id="modalPlayerWrap"
+                hidden
+            >
+
+                <video
+                    id="modalVideo"
+                    class="modal-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    Your browser does not support video playback.
+                </video>
+
+            </div>
+
+
+            <!-- Poster / details -->
+
+            <div class="modal-body">
+
+                <div class="modal-poster-wrap">
+
+                    <img
+                        id="modalPoster"
+                        class="modal-poster"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <div class="modal-info">
+
+                    <div
+                        class="modal-genre"
+                        id="modalGenre"
+                    >
+                        Movie
+                    </div>
+
+                    <h2 id="modalTitle">
+                        Title
+                    </h2>
+
+                    <div
+                        class="modal-meta"
+                        id="modalMeta"
+                    >
+                        2026 • 2h
+                    </div>
+
+                    <div
+                        class="modal-rating"
+                        id="modalRating"
+                    >
+                        ★ 0.0
+                    </div>
+
+                    <p
+                        class="modal-description"
+                        id="modalDescription"
+                    >
+                        Description
+                    </p>
+
+
+                    <div class="modal-actions">
+
+                        <button
+                            class="btn btn-primary"
+                            id="watchNow"
+                            type="button"
+                        >
+                            ▶ Watch
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            id="addWatchlist"
+                            type="button"
+                        >
+                            ♡ My List
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         TOAST
+    =============================== -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-icon">H</span>
+                    <span>Hiwa<span class="logo-accent">Movies</span></span>
+                </a>
+
+                <p>
+                    Your personal movie universe.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#shows">TV Shows</a>
+                <a href="#anime">Anime</a>
+                <a href="#watchlist">My List</a>
+
+            </div>
+
+
+            <div class="footer-copy">
+                © <span id="currentYear"></span> HiwaMovies
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
