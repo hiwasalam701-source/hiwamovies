@@ -1,14 +1,12 @@
 /* =========================================
-   HIWAMOVIES
-   MAIN JAVASCRIPT
-========================================= */
-
-
-/* =========================================
-   MOVIE DATABASE
+   HIWAMOVIES — UPGRADED JAVASCRIPT
 ========================================= */
 
 const movies = [
+
+  /* =========================
+     MOVIES
+  ========================= */
 
   {
     id: 1,
@@ -17,6 +15,7 @@ const movies = [
     genre: "Sci-Fi",
     rating: 8.8,
     runtime: "2h 28m",
+    type: "movie",
     description:
       "A skilled team enters the dreams of others to perform an unusual kind of mission.",
     accent: "dream"
@@ -29,6 +28,7 @@ const movies = [
     genre: "Sci-Fi",
     rating: 8.7,
     runtime: "2h 49m",
+    type: "movie",
     description:
       "A group of explorers travel beyond our solar system searching for a future for humanity.",
     accent: "space"
@@ -41,6 +41,7 @@ const movies = [
     genre: "Action",
     rating: 9.0,
     runtime: "2h 32m",
+    type: "movie",
     description:
       "Batman faces a dangerous criminal who pushes Gotham into chaos.",
     accent: "gotham"
@@ -53,6 +54,7 @@ const movies = [
     genre: "Action",
     rating: 8.5,
     runtime: "2h 35m",
+    type: "movie",
     description:
       "A Roman general fights his way back after losing everything.",
     accent: "roman"
@@ -65,6 +67,7 @@ const movies = [
     genre: "Drama",
     rating: 8.5,
     runtime: "1h 46m",
+    type: "movie",
     description:
       "A young musician is pushed to his limits by an extremely demanding instructor.",
     accent: "music"
@@ -77,6 +80,7 @@ const movies = [
     genre: "Thriller",
     rating: 8.5,
     runtime: "2h 12m",
+    type: "movie",
     description:
       "Two families from completely different worlds become unexpectedly connected.",
     accent: "parasite"
@@ -89,6 +93,7 @@ const movies = [
     genre: "Sci-Fi",
     rating: 8.7,
     runtime: "2h 16m",
+    type: "movie",
     description:
       "A computer programmer discovers that reality may not be what it seems.",
     accent: "matrix"
@@ -101,6 +106,7 @@ const movies = [
     genre: "Adventure",
     rating: 8.0,
     runtime: "2h 35m",
+    type: "movie",
     description:
       "A young nobleman becomes caught in a massive struggle over a desert planet.",
     accent: "dune"
@@ -113,6 +119,7 @@ const movies = [
     genre: "Drama",
     rating: 8.6,
     runtime: "3h",
+    type: "movie",
     description:
       "A historical drama following the scientist at the center of a world-changing project.",
     accent: "oppenheimer"
@@ -125,6 +132,7 @@ const movies = [
     genre: "Action",
     rating: 8.4,
     runtime: "3h 1m",
+    type: "movie",
     description:
       "The remaining heroes attempt to undo a devastating event and restore what was lost.",
     accent: "avengers"
@@ -132,11 +140,12 @@ const movies = [
 
   {
     id: 11,
-    title: "Spider-Man",
+    title: "Spider-Man: Into the Spider-Verse",
     year: 2018,
     genre: "Animation",
     rating: 8.4,
     runtime: "1h 57m",
+    type: "movie",
     description:
       "A teenager discovers that becoming a hero means more than wearing a mask.",
     accent: "spider"
@@ -149,6 +158,7 @@ const movies = [
     genre: "Drama",
     rating: 8.5,
     runtime: "2h 10m",
+    type: "movie",
     description:
       "Two rival performers become obsessed with surpassing each other's greatest tricks.",
     accent: "prestige"
@@ -161,6 +171,7 @@ const movies = [
     genre: "Action",
     rating: 7.4,
     runtime: "1h 41m",
+    type: "movie",
     description:
       "A retired assassin is pulled back into a dangerous world he left behind.",
     accent: "wick"
@@ -173,6 +184,7 @@ const movies = [
     genre: "Horror",
     rating: 7.8,
     runtime: "1h 44m",
+    type: "movie",
     description:
       "A weekend visit becomes increasingly strange and unsettling.",
     accent: "getout"
@@ -185,6 +197,7 @@ const movies = [
     genre: "Comedy",
     rating: 7.6,
     runtime: "1h 53m",
+    type: "movie",
     description:
       "Two friends attempt to make the most of their final days before graduation.",
     accent: "comedy"
@@ -197,6 +210,7 @@ const movies = [
     genre: "Action",
     rating: 8.1,
     runtime: "2h",
+    type: "movie",
     description:
       "A relentless chase unfolds across a dangerous post-apocalyptic wasteland.",
     accent: "madmax"
@@ -209,6 +223,7 @@ const movies = [
     genre: "Drama",
     rating: 7.8,
     runtime: "2h",
+    type: "movie",
     description:
       "The rise of a revolutionary social platform changes the lives of its creators.",
     accent: "social"
@@ -221,6 +236,7 @@ const movies = [
     genre: "Horror",
     rating: 7.5,
     runtime: "1h 30m",
+    type: "movie",
     description:
       "A family attempts to survive in a world where making noise can be dangerous.",
     accent: "quiet"
@@ -233,6 +249,7 @@ const movies = [
     genre: "Comedy",
     rating: 7.7,
     runtime: "1h 40m",
+    type: "movie",
     description:
       "A group of friends wake up after an unforgettable night and try to piece together what happened.",
     accent: "hangover"
@@ -245,299 +262,309 @@ const movies = [
     genre: "Sci-Fi",
     rating: 7.9,
     runtime: "1h 56m",
+    type: "movie",
     description:
       "A linguist works to understand mysterious visitors who have arrived on Earth.",
     accent: "arrival"
+  },
+
+
+  /* =========================
+     TV SHOWS
+  ========================= */
+
+  {
+    id: 101,
+    title: "The Walking Dead",
+    year: 2010,
+    genre: "Drama",
+    rating: 8.1,
+    runtime: "11 seasons",
+    type: "show",
+    description:
+      "A group of survivors tries to build a life in a world transformed by a mysterious outbreak.",
+    accent: "quiet"
+  },
+
+  {
+    id: 102,
+    title: "Stranger Things",
+    year: 2016,
+    genre: "Sci-Fi",
+    rating: 8.6,
+    runtime: "5 seasons",
+    type: "show",
+    description:
+      "A group of friends uncover strange events in their small town.",
+    accent: "matrix"
+  },
+
+  {
+    id: 103,
+    title: "Breaking Bad",
+    year: 2008,
+    genre: "Drama",
+    rating: 9.5,
+    runtime: "5 seasons",
+    type: "show",
+    description:
+      "A chemistry teacher's life changes dramatically after a serious diagnosis.",
+    accent: "social"
+  },
+
+  {
+    id: 104,
+    title: "The Last of Us",
+    year: 2023,
+    genre: "Drama",
+    rating: 8.7,
+    runtime: "2 seasons",
+    type: "show",
+    description:
+      "A hardened survivor escorts a teenager across a dangerous post-apocalyptic world.",
+    accent: "arrival"
+  },
+
+
+  /* =========================
+     ANIME
+  ========================= */
+
+  {
+    id: 201,
+    title: "One Piece",
+    year: 1999,
+    genre: "Adventure",
+    rating: 9.0,
+    runtime: "1000+ episodes",
+    type: "anime",
+    description:
+      "A young pirate and his crew set out to find the legendary One Piece.",
+    accent: "avengers"
+  },
+
+  {
+    id: 202,
+    title: "Attack on Titan",
+    year: 2013,
+    genre: "Action",
+    rating: 9.1,
+    runtime: "89 episodes",
+    type: "anime",
+    description:
+      "Humanity fights for survival against mysterious giant creatures.",
+    accent: "gotham"
+  },
+
+  {
+    id: 203,
+    title: "Demon Slayer",
+    year: 2019,
+    genre: "Action",
+    rating: 8.6,
+    runtime: "4 seasons",
+    type: "anime",
+    description:
+      "A young swordsman joins a dangerous fight after tragedy strikes his family.",
+    accent: "wick"
+  },
+
+  {
+    id: 204,
+    title: "Hunter x Hunter",
+    year: 2011,
+    genre: "Adventure",
+    rating: 9.0,
+    runtime: "148 episodes",
+    type: "anime",
+    description:
+      "A young boy becomes a Hunter while searching for his father.",
+    accent: "space"
+  },
+
+  {
+    id: 205,
+    title: "Death Note",
+    year: 2006,
+    genre: "Thriller",
+    rating: 8.6,
+    runtime: "37 episodes",
+    type: "anime",
+    description:
+      "A mysterious notebook gives its owner extraordinary power and dangerous choices.",
+    accent: "matrix"
+  },
+
+
+  /* =========================
+     LEGAL VIDEO DEMO
+  ========================= */
+
+  {
+    id: 900,
+    title: "Big Buck Bunny",
+    year: 2008,
+    genre: "Animation",
+    rating: 7.8,
+    runtime: "10 minutes",
+    type: "movie",
+    description:
+      "An openly licensed animated short included as a demonstration of HiwaMovies video playback.",
+    accent: "comedy",
+
+    /*
+      This is an openly licensed demo video.
+      Replace this URL only with videos you have
+      permission to stream.
+    */
+
+    videoUrl:
+      "https://download.blender.org/demo/movies/BBB/bbb_sunflower_1080p_30fps_normal.mp4"
   }
 
 ];
 
 
 /* =========================================
-   STATE
-========================================= */
-
-let currentFilter = "all";
-
-let visibleMovies = 10;
-
-let selectedMovie = null;
-
-let watchlist = JSON.parse(
-  localStorage.getItem("hiwaMoviesWatchlist")
-) || [];
-
-
-/* =========================================
-   DOM ELEMENTS
-========================================= */
-
-const movieGrid =
-  document.getElementById(
-    "movieGrid"
-  );
-
-const watchlistGrid =
-  document.getElementById(
-    "watchlistGrid"
-  );
-
-const emptyWatchlist =
-  document.getElementById(
-    "emptyWatchlist"
-  );
-
-const movieCount =
-  document.getElementById(
-    "movieCount"
-  );
-
-const loadMore =
-  document.getElementById(
-    "loadMore"
-  );
-
-const movieModal =
-  document.getElementById(
-    "movieModal"
-  );
-
-const modalClose =
-  document.getElementById(
-    "modalClose"
-  );
-
-const modalTitle =
-  document.getElementById(
-    "modalTitle"
-  );
-
-const modalGenre =
-  document.getElementById(
-    "modalGenre"
-  );
-
-const modalMeta =
-  document.getElementById(
-    "modalMeta"
-  );
-
-const modalRating =
-  document.getElementById(
-    "modalRating"
-  );
-
-const modalDescription =
-  document.getElementById(
-    "modalDescription"
-  );
-
-const modalPoster =
-  document.getElementById(
-    "modalPoster"
-  );
-
-const addWatchlist =
-  document.getElementById(
-    "addWatchlist"
-  );
-
-const toast =
-  document.getElementById(
-    "toast"
-  );
-
-const toastMessage =
-  document.getElementById(
-    "toastMessage"
-  );
-
-const searchOverlay =
-  document.getElementById(
-    "searchOverlay"
-  );
-
-const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
-
-const searchResults =
-  document.getElementById(
-    "searchResults"
-  );
-
-const mobileMenu =
-  document.getElementById(
-    "mobileMenu"
-  );
-
-
-/* =========================================
-   INITIALIZATION
-========================================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-
-    movieCount.textContent =
-      movies.length;
-
-    renderMovies();
-
-    renderWatchlist();
-
-    setupFilters();
-
-    setupNavigation();
-
-    setupSearch();
-
-    setupModal();
-
-    setupRandomMovie();
-
-    setupGenres();
-
-  }
-);
-
-
-/* =========================================
-   POSTER COLORS
+   POSTER THEMES
 ========================================= */
 
 const posterThemes = {
 
-  dream: [
-    "#392e63",
-    "#11111a"
-  ],
-
-  space: [
-    "#172f5c",
-    "#090b14"
-  ],
-
-  gotham: [
-    "#202633",
-    "#08090d"
-  ],
-
-  roman: [
-    "#56392c",
-    "#15100e"
-  ],
-
-  music: [
-    "#402c51",
-    "#111018"
-  ],
-
-  parasite: [
-    "#294538",
-    "#0c1210"
-  ],
-
-  matrix: [
-    "#153b31",
-    "#050908"
-  ],
-
-  dune: [
-    "#72502d",
-    "#17120d"
-  ],
-
-  oppenheimer: [
-    "#512b24",
-    "#100b0a"
-  ],
-
-  avengers: [
-    "#382f65",
-    "#100e1b"
-  ],
-
-  spider: [
-    "#652e45",
-    "#151019"
-  ],
-
-  prestige: [
-    "#3c4051",
-    "#0c0d12"
-  ],
-
-  wick: [
-    "#242f43",
-    "#080a0e"
-  ],
-
-  getout: [
-    "#263a35",
-    "#090e0c"
-  ],
-
-  comedy: [
-    "#55432c",
-    "#16120d"
-  ],
-
-  madmax: [
-    "#713f27",
-    "#180d08"
-  ],
-
-  social: [
-    "#30465a",
-    "#0b1015"
-  ],
-
-  quiet: [
-    "#343d3c",
-    "#0d1111"
-  ],
-
-  hangover: [
-    "#493a5d",
-    "#110e16"
-  ],
-
-  arrival: [
-    "#263c50",
-    "#090e13"
-  ]
+  dream: ["#392e63", "#11111a"],
+  space: ["#172f5c", "#090b14"],
+  gotham: ["#202633", "#08090d"],
+  roman: ["#56392c", "#15100e"],
+  music: ["#402c51", "#111018"],
+  parasite: ["#294538", "#0c1210"],
+  matrix: ["#153b31", "#050908"],
+  dune: ["#72502d", "#17120d"],
+  oppenheimer: ["#512b24", "#100b0a"],
+  avengers: ["#382f65", "#100e1b"],
+  spider: ["#652e45", "#151019"],
+  prestige: ["#3c4051", "#0c0d12"],
+  wick: ["#242f43", "#080a0e"],
+  getout: ["#263a35", "#090e0c"],
+  comedy: ["#55432c", "#16120d"],
+  madmax: ["#713f27", "#180d08"],
+  social: ["#30465a", "#0b1015"],
+  quiet: ["#343d3c", "#0d1111"],
+  hangover: ["#493a5d", "#110e16"],
+  arrival: ["#263c50", "#090e13"]
 
 };
 
 
 /* =========================================
-   GET FILTERED MOVIES
+   STATE
+========================================= */
+
+let currentType = "all";
+let currentFilter = "all";
+let visibleMovies = 10;
+let selectedMovie = null;
+
+let watchlist =
+  JSON.parse(
+    localStorage.getItem(
+      "hiwaMoviesWatchlist"
+    ) || "[]"
+  );
+
+
+/* =========================================
+   DOM
+========================================= */
+
+const $ = id =>
+  document.getElementById(id);
+
+const movieGrid =
+  $("movieGrid");
+
+const watchlistGrid =
+  $("watchlistGrid");
+
+const emptyWatchlist =
+  $("emptyWatchlist");
+
+const loadMore =
+  $("loadMore");
+
+const movieModal =
+  $("movieModal");
+
+const modalClose =
+  $("modalClose");
+
+const modalTitle =
+  $("modalTitle");
+
+const modalGenre =
+  $("modalGenre");
+
+const modalMeta =
+  $("modalMeta");
+
+const modalRating =
+  $("modalRating");
+
+const modalDescription =
+  $("modalDescription");
+
+const modalPoster =
+  $("modalPoster");
+
+const addWatchlist =
+  $("addWatchlist");
+
+const toast =
+  $("toast");
+
+const searchOverlay =
+  $("searchOverlay");
+
+const searchInput =
+  $("searchInput");
+
+const searchResults =
+  $("searchResults");
+
+const modalPlayerWrap =
+  $("modalPlayerWrap");
+
+const modalVideo =
+  $("modalVideo");
+
+const watchNow =
+  $("watchNow");
+
+
+/* =========================================
+   FILTER
 ========================================= */
 
 function getFilteredMovies() {
 
-  if (
-    currentFilter === "all"
-  ) {
+  return movies.filter(movie => {
 
-    return movies;
+    const typeMatch =
+      currentType === "all" ||
+      movie.type === currentType;
 
-  }
+    const genreMatch =
+      currentFilter === "all" ||
+      movie.genre === currentFilter;
 
-  return movies.filter(
-    movie =>
-      movie.genre ===
-      currentFilter
-  );
+    return typeMatch && genreMatch;
+
+  });
 
 }
 
 
 /* =========================================
-   CREATE MOVIE CARD
+   CREATE CARD
 ========================================= */
 
 function createMovieCard(
@@ -584,6 +611,16 @@ function createMovieCard(
         ${String(index + 1).padStart(2, "0")}
       </div>
 
+      <div class="poster-type">
+        ${
+          movie.type === "show"
+            ? "TV"
+            : movie.type === "anime"
+              ? "ANIME"
+              : "MOVIE"
+        }
+      </div>
+
       <button
         class="
           favorite-button
@@ -595,7 +632,7 @@ function createMovieCard(
       </button>
 
       <div class="poster-title">
-        ${movie.title}
+        ${escapeHtml(movie.title)}
       </div>
 
     </div>
@@ -603,22 +640,18 @@ function createMovieCard(
     <div class="movie-info">
 
       <div class="movie-title">
-        ${movie.title}
+        ${escapeHtml(movie.title)}
       </div>
 
       <div class="movie-bottom">
 
         <div class="movie-meta">
 
-          <span>
-            ${movie.year}
-          </span>
+          <span>${movie.year}</span>
 
           <span>•</span>
 
-          <span>
-            ${movie.genre}
-          </span>
+          <span>${escapeHtml(movie.genre)}</span>
 
         </div>
 
@@ -633,8 +666,6 @@ function createMovieCard(
   `;
 
 
-  /* Open details */
-
   card.addEventListener(
     "click",
     event => {
@@ -644,38 +675,31 @@ function createMovieCard(
           ".favorite-button"
         )
       ) {
-
         return;
-
       }
 
-      openMovieModal(
-        movie
-      );
+      openMovieModal(movie);
 
     }
   );
 
 
-  /* Favorite */
-
-  const favoriteButton =
-    card.querySelector(
+  card
+    .querySelector(
       ".favorite-button"
+    )
+    .addEventListener(
+      "click",
+      event => {
+
+        event.stopPropagation();
+
+        toggleWatchlist(
+          movie.id
+        );
+
+      }
     );
-
-  favoriteButton.addEventListener(
-    "click",
-    event => {
-
-      event.stopPropagation();
-
-      toggleWatchlist(
-        movie.id
-      );
-
-    }
-  );
 
 
   return card;
@@ -688,6 +712,10 @@ function createMovieCard(
 ========================================= */
 
 function renderMovies() {
+
+  if (!movieGrid) {
+    return;
+  }
 
   movieGrid.innerHTML = "";
 
@@ -709,10 +737,10 @@ function renderMovies() {
 
       <div
         style="
-          grid-column: 1 / -1;
-          padding: 60px;
-          text-align: center;
-          color: #777985;
+          grid-column:1/-1;
+          padding:60px;
+          text-align:center;
+          color:#777985;
         "
       >
 
@@ -720,25 +748,27 @@ function renderMovies() {
           🎬
         </div>
 
-        <h3 style="
-          margin-top:15px;
-          color:white;
-        ">
-          No movies found
+        <h3
+          style="
+            margin-top:15px;
+            color:white;
+          "
+        >
+          Nothing found
         </h3>
 
-        <p style="
-          margin-top:5px;
-        ">
-          Try another genre.
+        <p>
+          Try another filter.
         </p>
 
       </div>
 
     `;
 
-    loadMore.style.display =
-      "none";
+    if (loadMore) {
+      loadMore.style.display =
+        "none";
+    }
 
     return;
 
@@ -759,18 +789,13 @@ function renderMovies() {
   );
 
 
-  if (
-    visible.length <
-    filtered.length
-  ) {
+  if (loadMore) {
 
     loadMore.style.display =
-      "block";
-
-  } else {
-
-    loadMore.style.display =
-      "none";
+      visible.length <
+      filtered.length
+        ? "block"
+        : "none";
 
   }
 
@@ -781,60 +806,114 @@ function renderMovies() {
    LOAD MORE
 ========================================= */
 
-loadMore.addEventListener(
-  "click",
-  () => {
+if (loadMore) {
 
-    visibleMovies += 5;
+  loadMore.addEventListener(
+    "click",
+    () => {
 
-    renderMovies();
+      visibleMovies += 5;
 
-  }
-);
-
-
-/* =========================================
-   FILTERS
-========================================= */
-
-function setupFilters() {
-
-  const filters =
-    document.querySelectorAll(
-      ".filter"
-    );
-
-
-  filters.forEach(
-    filter => {
-
-      filter.addEventListener(
-        "click",
-        () => {
-
-          filters.forEach(
-            button =>
-              button.classList.remove(
-                "active"
-              )
-          );
-
-          filter.classList.add(
-            "active"
-          );
-
-          currentFilter =
-            filter.dataset.filter;
-
-          visibleMovies = 10;
-
-          renderMovies();
-
-        }
-      );
+      renderMovies();
 
     }
   );
+
+}
+
+
+/* =========================================
+   MEDIA FILTERS
+========================================= */
+
+function setupMediaFilters() {
+
+  document
+    .querySelectorAll(
+      ".media-filter"
+    )
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            document
+              .querySelectorAll(
+                ".media-filter"
+              )
+              .forEach(
+                item =>
+                  item.classList.remove(
+                    "active"
+                  )
+              );
+
+            button.classList.add(
+              "active"
+            );
+
+            currentType =
+              button.dataset.type;
+
+            visibleMovies = 10;
+
+            renderMovies();
+
+          }
+        );
+
+      }
+    );
+
+}
+
+
+/* =========================================
+   GENRE FILTERS
+========================================= */
+
+function setupGenreFilters() {
+
+  document
+    .querySelectorAll(
+      ".filter"
+    )
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            document
+              .querySelectorAll(
+                ".filter"
+              )
+              .forEach(
+                item =>
+                  item.classList.remove(
+                    "active"
+                  )
+              );
+
+            button.classList.add(
+              "active"
+            );
+
+            currentFilter =
+              button.dataset.filter;
+
+            visibleMovies = 10;
+
+            renderMovies();
+
+          }
+        );
+
+      }
+    );
 
 }
 
@@ -845,58 +924,70 @@ function setupFilters() {
 
 function setupGenres() {
 
-  const genreCards =
-    document.querySelectorAll(
+  document
+    .querySelectorAll(
       ".genre-card"
+    )
+    .forEach(
+      card => {
+
+        card.addEventListener(
+          "click",
+          () => {
+
+            currentFilter =
+              card.dataset.genre;
+
+            currentType =
+              "all";
+
+            visibleMovies = 10;
+
+            document
+              .querySelectorAll(
+                ".filter"
+              )
+              .forEach(
+                filter => {
+
+                  filter.classList.toggle(
+                    "active",
+                    filter.dataset.filter ===
+                      currentFilter
+                  );
+
+                }
+              );
+
+            document
+              .querySelectorAll(
+                ".media-filter"
+              )
+              .forEach(
+                filter => {
+
+                  filter.classList.toggle(
+                    "active",
+                    filter.dataset.type ===
+                      "all"
+                  );
+
+                }
+              );
+
+            renderMovies();
+
+            $("movies")
+              ?.scrollIntoView({
+                behavior:
+                  "smooth"
+              });
+
+          }
+        );
+
+      }
     );
-
-
-  genreCards.forEach(
-    card => {
-
-      card.addEventListener(
-        "click",
-        () => {
-
-          const genre =
-            card.dataset.genre;
-
-          currentFilter =
-            genre;
-
-          visibleMovies = 10;
-
-          document
-            .querySelectorAll(
-              ".filter"
-            )
-            .forEach(
-              filter => {
-
-                filter.classList.toggle(
-                  "active",
-                  filter.dataset.filter ===
-                  genre
-                );
-
-              }
-            );
-
-          renderMovies();
-
-          document
-            .getElementById(
-              "movies"
-            )
-            .scrollIntoView({
-              behavior: "smooth"
-            });
-
-        }
-      );
-
-    }
-  );
 
 }
 
@@ -909,13 +1000,11 @@ function toggleWatchlist(
   movieId
 ) {
 
-  const exists =
+  if (
     watchlist.includes(
       movieId
-    );
-
-
-  if (exists) {
+    )
+  ) {
 
     watchlist =
       watchlist.filter(
@@ -952,15 +1041,7 @@ function toggleWatchlist(
 
   renderWatchlist();
 
-
-  if (
-    selectedMovie &&
-    selectedMovie.id === movieId
-  ) {
-
-    updateWatchlistButton();
-
-  }
+  updateWatchlistButton();
 
 }
 
@@ -971,8 +1052,13 @@ function toggleWatchlist(
 
 function renderWatchlist() {
 
-  watchlistGrid.innerHTML = "";
+  if (
+    !watchlistGrid
+  ) {
+    return;
+  }
 
+  watchlistGrid.innerHTML = "";
 
   const savedMovies =
     movies.filter(
@@ -984,19 +1070,15 @@ function renderWatchlist() {
 
 
   if (
-    savedMovies.length === 0
+    emptyWatchlist
   ) {
 
     emptyWatchlist.style.display =
-      "block";
-
-    return;
+      savedMovies.length
+        ? "none"
+        : "block";
 
   }
-
-
-  emptyWatchlist.style.display =
-    "none";
 
 
   savedMovies.forEach(
@@ -1031,7 +1113,13 @@ function openMovieModal(
     movie.title;
 
   modalGenre.textContent =
-    movie.genre;
+    `${
+      movie.type === "show"
+        ? "TV Show"
+        : movie.type === "anime"
+          ? "Anime"
+          : "Movie"
+    } • ${movie.genre}`;
 
   modalMeta.textContent =
     `${movie.year} • ${movie.runtime}`;
@@ -1064,12 +1152,43 @@ function openMovieModal(
 
   modalPoster.innerHTML = `
     <strong>
-      ${movie.title}
+      ${escapeHtml(movie.title)}
     </strong>
   `;
 
 
   updateWatchlistButton();
+
+
+  if (modalPlayerWrap) {
+
+    modalPlayerWrap.hidden =
+      true;
+
+  }
+
+
+  if (modalVideo) {
+
+    modalVideo.pause();
+
+    modalVideo.removeAttribute(
+      "src"
+    );
+
+    modalVideo.load();
+
+  }
+
+
+  if (watchNow) {
+
+    watchNow.textContent =
+      movie.videoUrl
+        ? "▶ Watch Now"
+        : "▶ Watch";
+
+  }
 
 
   movieModal.classList.add(
@@ -1082,7 +1201,32 @@ function openMovieModal(
 }
 
 
+/* =========================================
+   CLOSE MODAL
+========================================= */
+
 function closeMovieModal() {
+
+  if (modalVideo) {
+
+    modalVideo.pause();
+
+    modalVideo.removeAttribute(
+      "src"
+    );
+
+    modalVideo.load();
+
+  }
+
+
+  if (modalPlayerWrap) {
+
+    modalPlayerWrap.hidden =
+      true;
+
+  }
+
 
   movieModal.classList.remove(
     "active"
@@ -1100,7 +1244,7 @@ function closeMovieModal() {
 
 function setupModal() {
 
-  modalClose.addEventListener(
+  modalClose?.addEventListener(
     "click",
     closeMovieModal
   );
@@ -1110,13 +1254,13 @@ function setupModal() {
     .querySelector(
       ".modal-backdrop"
     )
-    .addEventListener(
+    ?.addEventListener(
       "click",
       closeMovieModal
     );
 
 
-  addWatchlist.addEventListener(
+  addWatchlist?.addEventListener(
     "click",
     () => {
 
@@ -1129,6 +1273,47 @@ function setupModal() {
         );
 
       }
+
+    }
+  );
+
+
+  watchNow?.addEventListener(
+    "click",
+    () => {
+
+      if (
+        !selectedMovie
+      ) {
+        return;
+      }
+
+
+      if (
+        !selectedMovie.videoUrl
+      ) {
+
+        showToast(
+          "No licensed video source is configured for this title."
+        );
+
+        return;
+
+      }
+
+
+      modalPlayerWrap.hidden =
+        false;
+
+      modalVideo.src =
+        selectedMovie.videoUrl;
+
+      modalVideo.load();
+
+      modalVideo.play()
+        .catch(
+          () => {}
+        );
 
     }
   );
@@ -1153,17 +1338,16 @@ function setupModal() {
 
 
 /* =========================================
-   UPDATE WATCHLIST BUTTON
+   WATCHLIST BUTTON
 ========================================= */
 
 function updateWatchlistButton() {
 
   if (
-    !selectedMovie
+    !selectedMovie ||
+    !addWatchlist
   ) {
-
     return;
-
   }
 
 
@@ -1182,60 +1366,137 @@ function updateWatchlistButton() {
 
 
 /* =========================================
-   RANDOM MOVIE
+   RANDOM
 ========================================= */
 
 function setupRandomMovie() {
 
-  const button =
-    document.getElementById(
-      "randomButton"
-    );
+  $("randomButton")
+    ?.addEventListener(
+      "click",
+      () => {
 
+        const random =
+          movies[
+            Math.floor(
+              Math.random() *
+                movies.length
+            )
+          ];
 
-  button.addEventListener(
-    "click",
-    () => {
-
-      const randomIndex =
-        Math.floor(
-          Math.random() *
-          movies.length
+        openMovieModal(
+          random
         );
 
-
-      openMovieModal(
-        movies[randomIndex]
-      );
-
-    }
-  );
+      }
+    );
 
 }
 
 
 /* =========================================
-   EXPLORE BUTTON
+   EXPLORE
 ========================================= */
 
-document
-  .getElementById(
-    "exploreButton"
-  )
-  .addEventListener(
-    "click",
-    () => {
+function setupExplore() {
 
-      document
-        .getElementById(
-          "movies"
-        )
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+  $("exploreButton")
+    ?.addEventListener(
+      "click",
+      () => {
 
-    }
-  );
+        $("movies")
+          ?.scrollIntoView({
+            behavior:
+              "smooth"
+          });
+
+      }
+    );
+
+
+  $("viewAllButton")
+    ?.addEventListener(
+      "click",
+      () => {
+
+        currentType =
+          "all";
+
+        currentFilter =
+          "all";
+
+        visibleMovies =
+          movies.length;
+
+
+        document
+          .querySelectorAll(
+            ".media-filter"
+          )
+          .forEach(
+            filter => {
+
+              filter.classList.toggle(
+                "active",
+                filter.dataset.type ===
+                  "all"
+              );
+
+            }
+          );
+
+
+        document
+          .querySelectorAll(
+            ".filter"
+          )
+          .forEach(
+            filter => {
+
+              filter.classList.toggle(
+                "active",
+                filter.dataset.filter ===
+                  "all"
+              );
+
+            }
+          );
+
+
+        renderMovies();
+
+        $("movies")
+          ?.scrollIntoView({
+            behavior:
+              "smooth"
+          });
+
+      }
+    );
+
+
+  $("featuredButton")
+    ?.addEventListener(
+      "click",
+      () => {
+
+        const featured =
+          movies.find(
+            movie =>
+              movie.id === 3
+          );
+
+        if (featured) {
+          openMovieModal(
+            featured
+          );
+        }
+
+      }
+    );
+
+}
 
 
 /* =========================================
@@ -1244,18 +1505,14 @@ document
 
 function setupSearch() {
 
-  const searchButton =
-    document.getElementById(
-      "searchButton"
-    );
+  const openSearch =
+    $("openSearch");
 
   const closeSearch =
-    document.getElementById(
-      "closeSearch"
-    );
+    $("closeSearch");
 
 
-  searchButton.addEventListener(
+  openSearch?.addEventListener(
     "click",
     () => {
 
@@ -1268,7 +1525,7 @@ function setupSearch() {
 
       setTimeout(
         () =>
-          searchInput.focus(),
+          searchInput?.focus(),
         100
       );
 
@@ -1276,13 +1533,13 @@ function setupSearch() {
   );
 
 
-  closeSearch.addEventListener(
+  closeSearch?.addEventListener(
     "click",
     closeSearchOverlay
   );
 
 
-  searchOverlay.addEventListener(
+  searchOverlay?.addEventListener(
     "click",
     event => {
 
@@ -1299,7 +1556,7 @@ function setupSearch() {
   );
 
 
-  searchInput.addEventListener(
+  searchInput?.addEventListener(
     "input",
     () => {
 
@@ -1337,22 +1594,9 @@ function setupSearch() {
 }
 
 
-function closeSearchOverlay() {
-
-  searchOverlay.classList.remove(
-    "active"
-  );
-
-  document.body.style.overflow =
-    "";
-
-  searchInput.value = "";
-
-  searchResults.innerHTML =
-    "";
-
-}
-
+/* =========================================
+   SEARCH RESULTS
+========================================= */
 
 function performSearch(
   query
@@ -1382,23 +1626,19 @@ function performSearch(
 
   const results =
     movies.filter(
-      movie =>
+      movie => {
 
-        movie.title
-          .toLowerCase()
-          .includes(clean)
+        const text =
+          `${movie.title}
+           ${movie.genre}
+           ${movie.year}
+           ${movie.type}`.toLowerCase();
 
-        ||
+        return text.includes(
+          clean
+        );
 
-        movie.genre
-          .toLowerCase()
-          .includes(clean)
-
-        ||
-
-        String(movie.year)
-          .includes(clean)
-
+      }
     );
 
 
@@ -1411,8 +1651,8 @@ function performSearch(
         color:#666873;
         padding:20px 0;
       ">
-        No movies found for
-        "${query}".
+        Nothing found for
+        "${escapeHtml(query)}".
       </p>
     `;
 
@@ -1423,47 +1663,47 @@ function performSearch(
 
   searchResults.innerHTML =
     results
-      .slice(0, 8)
+      .slice(0, 12)
       .map(
         movie => `
 
           <button
             class="search-result"
             data-id="${movie.id}"
-            style="
-              display:flex;
-              width:100%;
-              align-items:center;
-              gap:15px;
-              padding:14px;
-              border:1px solid #242631;
-              border-radius:12px;
-              background:#111219;
-              color:white;
-              text-align:left;
-              margin-bottom:8px;
-            "
           >
 
-            <span style="
-              font-size:20px;
-            ">
-              🎬
+            <span
+              style="
+                font-size:25px;
+              "
+            >
+              ${
+                movie.type === "anime"
+                  ? "🍥"
+                  : movie.type === "show"
+                    ? "📺"
+                    : "🎬"
+              }
             </span>
 
             <span>
+
               <strong>
-                ${movie.title}
+                ${escapeHtml(movie.title)}
               </strong>
 
-              <small style="
-                display:block;
-                color:#666873;
-                margin-top:3px;
-              ">
+              <small
+                style="
+                  display:block;
+                  color:#666873;
+                  margin-top:3px;
+                "
+              >
                 ${movie.year}
                 •
-                ${movie.genre}
+                ${escapeHtml(movie.genre)}
+                •
+                ${movie.type}
                 •
                 ⭐ ${movie.rating}
               </small>
@@ -1501,8 +1741,72 @@ function performSearch(
 
             closeSearchOverlay();
 
-            openMovieModal(
-              movie
+            if (movie) {
+              openMovieModal(
+                movie
+              );
+            }
+
+          }
+        );
+
+      }
+    );
+
+}
+
+
+/* =========================================
+   CLOSE SEARCH
+========================================= */
+
+function closeSearchOverlay() {
+
+  searchOverlay.classList.remove(
+    "active"
+  );
+
+  document.body.style.overflow =
+    "";
+
+  searchInput.value = "";
+
+  searchResults.innerHTML =
+    "";
+
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+function setupNavigation() {
+
+  document
+    .querySelectorAll(
+      ".nav-link"
+    )
+    .forEach(
+      link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            document
+              .querySelectorAll(
+                ".nav-link"
+              )
+              .forEach(
+                item =>
+                  item.classList.remove(
+                    "active"
+                  )
+              );
+
+            link.classList.add(
+              "active"
             );
 
           }
@@ -1515,103 +1819,52 @@ function performSearch(
 
 
 /* =========================================
-   NAVIGATION
-========================================= */
-
-function setupNavigation() {
-
-  const navLinks =
-    document.querySelectorAll(
-      ".nav-link"
-    );
-
-
-  navLinks.forEach(
-    link => {
-
-      link.addEventListener(
-        "click",
-        () => {
-
-          navLinks.forEach(
-            item =>
-              item.classList.remove(
-                "active"
-              )
-          );
-
-          link.classList.add(
-            "active"
-          );
-
-        }
-      );
-
-    }
-  );
-
-}
-
-
-/* =========================================
    MOBILE MENU
 ========================================= */
 
-const mobileMenuButton =
-  document.getElementById(
-    "mobileMenuButton"
-  );
+function setupMobileMenu() {
 
-const mobileClose =
-  document.getElementById(
-    "mobileClose"
-  );
+  const button =
+    $("mobileMenuButton");
+
+  const menu =
+    $("mobileMenu");
 
 
-mobileMenuButton.addEventListener(
-  "click",
-  () => {
+  button?.addEventListener(
+    "click",
+    () => {
 
-    mobileMenu.classList.add(
-      "active"
-    );
-
-  }
-);
-
-
-mobileClose.addEventListener(
-  "click",
-  () => {
-
-    mobileMenu.classList.remove(
-      "active"
-    );
-
-  }
-);
-
-
-document
-  .querySelectorAll(
-    ".mobile-menu a"
-  )
-  .forEach(
-    link => {
-
-      link.addEventListener(
-        "click",
-        () => {
-
-          mobileMenu.classList.remove(
-            "active"
-          );
-
-        }
+      menu?.classList.toggle(
+        "active"
       );
 
     }
   );
+
+
+  document
+    .querySelectorAll(
+      ".mobile-menu a"
+    )
+    .forEach(
+      link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            menu?.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+      }
+    );
+
+}
 
 
 /* =========================================
@@ -1620,12 +1873,16 @@ document
 
 let toastTimer;
 
-
 function showToast(
   message
 ) {
 
-  toastMessage.textContent =
+  if (!toast) {
+    return;
+  }
+
+
+  toast.textContent =
     message;
 
   toast.classList.add(
@@ -1654,76 +1911,66 @@ function showToast(
 
 
 /* =========================================
-   VIEW ALL
+   ESCAPE HTML
 ========================================= */
 
-document
-  .getElementById(
-    "viewAllButton"
-  )
-  .addEventListener(
-    "click",
-    () => {
+function escapeHtml(
+  value
+) {
 
-      currentFilter =
-        "all";
+  return String(
+    value
+  ).replace(
+    /[&<>"']/g,
+    character => {
 
-      visibleMovies =
-        movies.length;
+      const entities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      };
 
-      document
-        .querySelectorAll(
-          ".filter"
-        )
-        .forEach(
-          filter => {
-
-            filter.classList.toggle(
-              "active",
-              filter.dataset.filter ===
-              "all"
-            );
-
-          }
-        );
-
-      renderMovies();
-
-      document
-        .getElementById(
-          "movies"
-        )
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+      return entities[
+        character
+      ];
 
     }
   );
 
+}
+
 
 /* =========================================
-   KEYBOARD SEARCH
+   START
 ========================================= */
 
 document.addEventListener(
-  "keydown",
-  event => {
+  "DOMContentLoaded",
+  () => {
 
-    if (
-      event.ctrlKey &&
-      event.key.toLowerCase() ===
-      "k"
-    ) {
+    renderMovies();
 
-      event.preventDefault();
+    renderWatchlist();
 
-      searchOverlay.classList.add(
-        "active"
-      );
+    setupMediaFilters();
 
-      searchInput.focus();
+    setupGenreFilters();
 
-    }
+    setupGenres();
+
+    setupNavigation();
+
+    setupSearch();
+
+    setupModal();
+
+    setupRandomMovie();
+
+    setupExplore();
+
+    setupMobileMenu();
 
   }
 );
