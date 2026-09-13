@@ -1974,3 +1974,28 @@ document.addEventListener(
 
   }
 );
+/* =========================================
+   HIWAMOVIES DEBUG CHECK
+========================================= */
+
+console.log("🔥 HiwaMovies JavaScript is loaded!");
+
+window.addEventListener("load", () => {
+  console.log("✅ Page finished loading");
+
+  const cssTest = document.querySelector("link[href*='style.css']");
+
+  if (cssTest) {
+    console.log("✅ style.css is connected");
+  } else {
+    console.error("❌ style.css is NOT connected");
+  }
+
+  const movieGrid = document.getElementById("movieGrid");
+
+  if (movieGrid) {
+    console.log("✅ Movie grid found");
+  } else {
+    console.error("❌ Movie grid not found");
+  }
+});
