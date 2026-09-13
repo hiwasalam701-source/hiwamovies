@@ -1999,3 +1999,37 @@ window.addEventListener("load", () => {
     console.error("❌ Movie grid not found");
   }
 });
+/* =========================================
+   HIWAMOVIES KEYBOARD CONTROLS
+========================================= */
+
+document.addEventListener("keydown", (event) => {
+  // Press "/" to open search
+  if (
+    event.key === "/" &&
+    document.activeElement?.tagName !== "INPUT" &&
+    document.activeElement?.tagName !== "TEXTAREA"
+  ) {
+    event.preventDefault();
+
+    const searchButton = document.getElementById("openSearch");
+
+    if (searchButton) {
+      searchButton.click();
+    }
+  }
+
+  // Press Escape to close search/modal
+  if (event.key === "Escape") {
+    const searchOverlay = document.getElementById("searchOverlay");
+    const movieModal = document.getElementById("movieModal");
+
+    if (searchOverlay) {
+      searchOverlay.classList.remove("open");
+    }
+
+    if (movieModal) {
+      movieModal.classList.remove("open");
+    }
+  }
+});
