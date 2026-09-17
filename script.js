@@ -9,7 +9,37 @@
 ========================================= */
 
 // PUT YOUR TMDB API KEY BETWEEN THE QUOTES
-const TMDB_API_KEY = "87181806c74ccb025925d4dbdc90bd22";
+const TMDB_API_KEY = import os
+from github import Github, GithubException
+
+# Retrieve token from environment variable
+TOKEN = os.getenv("GITHUB_TOKEN", "your_personal_access_token_here")
+g = Github(TOKEN)
+
+try:
+    # Get user info
+    user = g.get_user()
+    print(f"Authenticated as: {user.login}")
+
+    # Create a repository
+    repo = user.create_repo(
+        name="api-demo-repo",
+        description="Created via GitHub API",
+        private=False,
+        auto_init=True
+    )
+    print(f"Repo created: {repo.html_url}")
+
+    # Create an issue
+    issue = repo.create_issue(
+        title="Automated Issue",
+        body="This issue was created via script."
+    )
+    print(f"Issue #{issue.number} created: {issue.html_url}")
+
+except GithubException as e:
+    print(f"Error {e.status}: {e.data.get('message')}")
+
 
 const TMDB_BASE = "https://api.themoviedb.org/3";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p/w500";
