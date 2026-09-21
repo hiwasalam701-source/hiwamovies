@@ -1,26 +1,3 @@
-/* =========================================
-   HIWAMOVIES
-   DYNAMIC MOVIE / TV CATALOG
-========================================= */
-
-
-/* =========================================
-   TMDB SETTINGS
-========================================= */
-
-// PUT YOUR TMDB API KEY BETWEEN THE QUOTES
-const TMDB_API_KEY =/* =========================================
-   HIWAMOVIES
-   DYNAMIC MOVIE / TV CATALOG
-========================================= */
-
-
-/* =========================================
-   TMDB SETTINGS
-========================================= */
-
-// PUT YOUR TMDB API KEY BETWEEN THE QUOTES
-const TMDB_API_KEY =/* =========================================
    HIWAMOVIES
    DYNAMIC MOVIE / TV CATALOG
 ========================================= */
