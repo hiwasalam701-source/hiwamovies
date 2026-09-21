@@ -9,7 +9,7 @@
 ========================================= */
 
 // PUT YOUR TMDB API KEY BETWEEN THE QUOTES
-const TMDB_API_KEY = import os
+const TMDB_API_KEY = "import os
 from github import Github, GithubException
 
 # Retrieve token from environment variable
